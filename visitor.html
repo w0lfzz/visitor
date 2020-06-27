@@ -150,9 +150,9 @@
 						</div>
 						<p class="new-time"></p>
 						<div class="qr-code" id="qrcode"><img width="256" height="256" src="./src/code.png"></img></div>
-						<p class="valid-time">有效期：<span>2020-06-27 - 2020-07-03</span></p>
+						<p class="valid-time"></p>
 						<p class="health-type">杭州市健康码为  <span>绿码</span></p>
-						<p class="sync-time">同步时间：<span>2020-06-27 05:51:17</span></p>
+						<p class="sync-time">同步时间：<span>2020-06-14 05:51:17</span></p>
 						<p class="explains" style="display: block;">凭此码可在浙大城市学院内通行<br>请主动出示，配合检查</p>
 						<!-- <div class="btn"><a href="/default/dingding/IndexStudent.jsp">办事大厅</a><a href="javascript:;">查看申请记录</a></div> -->
 					</div>
@@ -178,6 +178,8 @@
 		var $dialog = $("#dialog");
 		$(function() {
 			time(".new-time");
+			valid_time(".valid-time");
+			sync_time(".sync-time");
 			//关闭弹窗
 			$dialog.on('click', '.weui-dialog__btn', function(){
 				$(this).parents('.js_dialog').fadeOut(200);
@@ -195,6 +197,23 @@
 				$(elem).html(zeroFill(myMonth) + "月" + zeroFill(myDate) + "日" + "<p class='time-inner'>" + zeroFill(myHours) + ":" + zeroFill(myMinutes) + ":" + zeroFill(mySeconds) + "</p>");
 				time(elem);
 			}, 500);
+		}
+		function valid_time(elem) {
+				var thatDate = new Date();
+				var myYear = thatDate.getFullYear();
+				var myMonth = thatDate.getMonth() + 1;
+				var myDate = thatDate.getDate();
+				$(elem).html("有效期：<span>"+zeroFill(myYear) + "-" + zeroFill(myMonth) + "-" + zeroFill(myDate) + " - " + +zeroFill(myYear) + "-" + zeroFill(myMonth) + "-" + zeroFill(myDate) + "</span>");
+		}
+		function sync_time(elem) {
+				var thatDate = new Date();
+				var myYear = thatDate.getFullYear();
+				var myMonth = thatDate.getMonth() + 1;
+				var myDate = thatDate.getDate();
+				var myHours = thatDate.getHours();
+				var myMinutes = thatDate.getMinutes();
+				var mySeconds = thatDate.getSeconds();
+				$(elem).html("同步时间：<span>"+zeroFill(myYear) + "-" + zeroFill(myMonth) + "-" + zeroFill(myDate) + " " +zeroFill(myHours) + ":" + zeroFill(myMinutes) + ":" + zeroFill(mySeconds)+"</span>");
 		}
 		function qrGenerate(foreground, text) {
 			jQuery('#qrcode').qrcode({
