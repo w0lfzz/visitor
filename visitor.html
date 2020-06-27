@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://dingding.zucc.edu.cn/default/process/backSchoolCode/backSchoolCode.jsp -->
+<html><!-- 
+  - Author(s): cjq
+  - Date: 2020-05-2 15:45
+  - Description: 
+--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>浙大城市学院通行码</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet"  type="text/css" href="./src/resize.css" >
+		<link rel="stylesheet"  type="text/css" href="./src/layui.css" media="all">
+		
+		<style type="text/css">
+			.html, body {height: 100vh;box-sizing: border-box;}
+			#apply {display: none;}
+			.main {
+				position: relative;
+				min-height: 100vh;
+				background: #fff;
+			}
+			.main .head {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				height: 4rem;
+				background: url("./src/health_back.jpg") no-repeat center;
+				background-size: 100%;
+				color: #fff;
+				font-size: .1rem;
+			}
+			.main .content {
+				width: 100%;
+				margin-top: -2rem;
+				padding: 0 .4rem .4rem;
+				box-sizing: border-box;
+			}
+			.main .content .item {
+				width: 100%;
+				padding: .3rem .25rem;
+				background: #fff;
+				box-sizing: border-box;
+				border-radius: .2rem;
+				text-align: center;
+				box-shadow: 0 0 .15rem #666;
+			}
+			.content .user {
+				display: flex;
+				justify-content: space-between;
+				line-height: .55rem;
+				font-size: .35rem;
+				letter-spacing: .02rem;
+				margin-bottom: .25rem;
+			}
+			.content .user-type {
+				height: .5rem;
+				line-height: .5rem;
+				color: #fff;
+				font-weight: 400;
+				font-size: .28rem;
+				background: #3E89F6;
+				padding: 0 .08rem;
+				border-radius: .1rem;
+				margin-right: .5rem;
+			}
+			.content .new-time {
+			    height: 2rem;
+			    line-height: 1rem;
+				font-size: .6rem;
+				font-weight: bold;
+				margin-bottom: .25rem;
+			}
+			.content .new-time .time-inner {
+				font-size: .8rem;
+			}
+			.content .qr-code {
+				width: 3.2rem;
+				height: 3.2rem;
+				margin: 0 auto .25rem;
+			}
+			.content .qr-code img {
+				width: 100%;
+				height: 100%;
+			}
+			.content .valid-time,
+			.content .sync-time {
+				font-size: .26rem;
+				color: #C2C2C2;
+				margin-bottom: .25rem;
+			}
+			.content .health-type {
+				font-size: .32rem;
+				color: #81AF78;
+				margin-bottom: .25rem;
+			}
+			.content .explains {
+				display: none;
+				color: #888;
+ 				font-size: .3rem;
+ 				margin-bottom: .25rem;
+			}
+			.content .btn {
+				display: flex;
+				justify-content: space-around;
+				width: 60%;
+				margin: 0 auto .06rem;
+				text-decoration: underline;
+				font-size: .3rem;
+			}
+			.content .btn a {
+				color: #666;
+			}
+			.main .other {
+				width: 100%;
+				box-sizing: border-box;
+				padding: 0 .5rem;
+				font-size: .32rem;
+				color: #999;
+				margin-top: .35rem;
+			}
+			.main .other .other-item {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: .16rem;
+			}
+			.main .other p {
+				color: #999;
+			}
+			.main .other a {
+				color: #618EC8;
+			}
+		</style>
+		<script src="./src/md5.min.js"></script>
+	</head>
+
+	<body style="">
+		<form id="apply" style="display: block;">
+			<div class="main">
+				<div class="head"></div>
+				<div class="content">
+					<div class="item">
+						<div class="user">
+							<p class="user-name">周宇梁的通行码</p>
+							<p class="user-type">研究生</p>
+						</div>
+						<p class="new-time"></p>
+						<div class="qr-code" id="qrcode"><img width="256" height="256" src="./src/code.png"></img></div>
+						<p class="valid-time">有效期：<span>2020-06-27 - 2020-07-03</span></p>
+						<p class="health-type">杭州市健康码为  <span>绿码</span></p>
+						<p class="sync-time">同步时间：<span>2020-06-27 05:51:17</span></p>
+						<p class="explains" style="display: block;">凭此码可在浙大城市学院内通行<br>请主动出示，配合检查</p>
+						<!-- <div class="btn"><a href="/default/dingding/IndexStudent.jsp">办事大厅</a><a href="javascript:;">查看申请记录</a></div> -->
+					</div>
+<!-- 					<div class="other"> -->
+<!-- 						<div class="other-item"> -->
+<!-- 							<p>安保处 &nbsp;&nbsp;：0571-88206110</p> -->
+<!-- 							<a href="">常见问题</a> -->
+<!-- 						</div> -->
+<!-- 						<div class="other-item"> -->
+<!-- 							<p>技术支持：0571-87951669</p> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+				</div>
+			</div>
+		</form>
+	
+
+	<script type="text/javascript" src="./src/jquery.min.js"></script>
+	<script src="./src/baseFunction.js"></script><script src="./src/dingtalk.open.js" type="text/javascript"></script>
+	<script type="text/javascript" src="./src/jquery.qrcode.min.js"></script>
+	
+	<script type="text/javascript">
+		var $dialog = $("#dialog");
+		$(function() {
+			time(".new-time");
+			//关闭弹窗
+			$dialog.on('click', '.weui-dialog__btn', function(){
+				$(this).parents('.js_dialog').fadeOut(200);
+			});
+		})
+		function time(elem) {
+			setTimeout(function() {
+				var thatDate = new Date();
+				//var myYear = thatDate.getFullYear();
+				var myMonth = thatDate.getMonth() + 1;
+				var myDate = thatDate.getDate();
+				var myHours = thatDate.getHours();
+				var myMinutes = thatDate.getMinutes();
+				var mySeconds = thatDate.getSeconds();
+				$(elem).html(zeroFill(myMonth) + "月" + zeroFill(myDate) + "日" + "<p class='time-inner'>" + zeroFill(myHours) + ":" + zeroFill(myMinutes) + ":" + zeroFill(mySeconds) + "</p>");
+				time(elem);
+			}, 500);
+		}
+		function qrGenerate(foreground, text) {
+			jQuery('#qrcode').qrcode({
+			    render: "canvas", //也可以替换为table
+			    foreground: foreground,
+			    background: "#FFF",
+			    text: text
+			});
+		}
+		function zeroFill(value) {
+			return value >= 10 ? value : "0" + value;
+		}
+	</script>
+
+<div id="fatkun-drop-panel">
+        <a id="fatkun-drop-panel-close-btn">×</a>
+       </body></html>
